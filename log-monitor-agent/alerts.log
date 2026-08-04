@@ -1,0 +1,6 @@
+[2026-08-04 10:32:12] ALERT: 5 failed password attempts from 192.168.56.10 (latest target user: admin) in the last 120s — possible brute force
+[2026-08-04 10:32:12] ALERT: 6 failed password attempts from 192.168.56.10 (latest target user: admin) in the last 120s — possible brute force
+[2026-08-04 10:32:12] ALERT: 5 invalid-user login attempts from 192.168.56.11 (latest: 'root2') in the last 120s — possible username enumeration
+[2026-08-04 10:32:12] ALERT: 3 failed sudo attempts by user 'student' in the last 300s — possible privilege escalation attempt
+[2026-08-04 10:57:32] ALERT: 5 failed password attempts from 192.168.50.10 (latest target user: kali) in the last 120s — possible brute force
+[2026-08-04 10:57:38] ALERT: 6 failed password attempts from 192.168.50.10 (latest target user: kali) in the last 120s — possible brute force
