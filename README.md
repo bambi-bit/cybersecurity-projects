@@ -10,8 +10,6 @@ A Python agent that tails authentication logs in real time and flags suspicious
 activity — brute-force attempts, username enumeration, and privilege escalation —
 using rule-based threshold analysis. Tested against live simulated attack traffic.
 
-*More projects coming soon: vulnerability scan reports, CTF writeups, and packet
-capture analysis.*
 
 ## About
 Built while working toward a cybersecurity specialization (Network and
