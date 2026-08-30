@@ -20,10 +20,7 @@ OPNsense's WAN interface faces Kali; its LAN interface faces Metasploitable2. No
 
 ## Step 1: Default-deny baseline
 
-With OPNsense installed and both interfaces addressed, but before any custom rule existed, Kali could not reach Metasploitable2 at all:
-$ ping -c 3 10.0.2.50
---- 10.0.2.50 ping statistics ---
-3 packets transmitted, 0 received, 100% packet loss
+With OPNsense installed and both interfaces addressed, but before any custom rule existed, Kali could not reach Metasploitable2 at all.
 
 This confirms OPNsense's implicit default-deny rule blocks all inter-segment traffic until a rule explicitly allows it — the same default-deny behavior is visible again below in the Nmap scan run against all three test ports before the allow-rule was added:
 
@@ -49,7 +46,6 @@ A single rule was added on the WAN interface, permitting only Kali → Metasploi
 ## Step 3: Validating the rule
 
 **Port 80 — explicitly allowed:**
-$ curl -v --interface eth0 http://10.0.2.50 --max-time 5
 
 Trying 10.0.2.50:80...
 Established connection to 10.0.2.50 (10.0.2.50 port 80) from 10.0.1.50 port 37418
@@ -60,7 +56,6 @@ Established connection to 10.0.2.50 (10.0.2.50 port 80) from 10.0.1.50 port 3741
 A full HTTP 200 response — the allowed traffic passes cleanly through the firewall.
 
 Ports 22 (SSH) and 3306 (MySQL) — not covered by any rule:
-$ nmap -Pn -e eth0 -p 22,3306 10.0.2.50
 PORT     STATE    SERVICE
 22/tcp   filtered ssh
 3306/tcp filtered mysql
@@ -87,4 +82,4 @@ Kali Linux (attacker-segment host)
 Metasploitable2 (target-segment host)
 curl, nmap, ping for validation
 
-One heads-up: your README has code blocks with triple-backticks inside it (the `ping`/`curl`/`nmap` outputs), and I wrapped the whole thing in triple-backticks too for this chat display — when you copy, make sure you copy from the line starting `# Home Lab Network Segmentation...` down to the last `- curl, nmap, ping for validation` line, **not** including my outer wrapper backticks.
+
