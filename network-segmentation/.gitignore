@@ -1,0 +1,30 @@
+# VirtualBox VM files — huge, and often contain host machine paths/usernames
+*.vdi
+*.vmdk
+*.vbox
+*.vbox-prev
+*.ova
+*.ovf
+
+# Snapshot and log data from VirtualBox
+Snapshots/
+Logs/
+
+# Any exported firewall/router config backups — these can contain hashed
+# passwords, API keys, or internal hostnames even in a lab
+*.xml.bak
+config-*.xml
+
+# Raw packet captures — may contain unsanitized traffic, headers, payloads
+*.pcap
+*.pcapng
+
+# Local environment / secrets files, if you ever add automation scripts
+.env
+*.key
+*.pem
+credentials*
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
