@@ -1,13 +1,13 @@
 # Metasploitable2 Vulnerability Assessment
 
-**Assessor:** Mahnoor
+
 **Target:** Metasploitable2 (10.0.2.20)
 **Scanner host:** Kali Linux (10.0.2.10)
-**Date:** September 2026
+
 
 \---
 
-## TLDR (plain language version)
+## TLDR 
 
 I set up a small lab with two virtual machines: Kali Linux (the attacker/scanner box) and Metasploitable2 (a deliberately broken, outdated Linux box made for practicing on). I scanned Metasploitable2 with Nmap to find every open door (port) and what software was answering behind each one. Several of those doors are seriously broken on purpose: one lets anyone log in as an anonymous FTP guest and has a known backdoor, one hands out a root shell with zero login required, and one runs a chat server with a trojaned version that gives an attacker a shell too. I confirmed the worst of these with targeted scripts rather than just guessing from version numbers.
 
