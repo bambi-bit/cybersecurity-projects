@@ -1,0 +1,11 @@
+*.gnmap
+notes/
+drafts/
+*.tmp
+.DS_Store
+Thumbs.db
+*.swp
+*.env
+*.pem
+*.key
+credentials.*
